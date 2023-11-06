@@ -1,0 +1,16 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "tab_1" (
+	"id"	INTEGER NOT NULL,
+	"nombre"	varchar(40) NOT NULL,
+	"apellido"	varchar(40) NOT NULL,
+	"edad"	tinyint(2) NOT NULL,
+	"fecha"	timestamp,
+	"provincia"	varchar(30) NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+INSERT INTO "tab_1" VALUES (1,'Juan','Pérez',25,NULL,'Madrid');
+INSERT INTO "tab_1" VALUES (2,'María','González',32,NULL,'Barcelona');
+INSERT INTO "tab_1" VALUES (3,'Luis','Fernández',40,NULL,'Sevilla');
+INSERT INTO "tab_1" VALUES (4,'Ana','Martínez',28,NULL,'Valencia');
+INSERT INTO "tab_1" VALUES (5,'Pedro','López',22,NULL,'Málaga');
+COMMIT;
